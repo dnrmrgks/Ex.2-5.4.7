@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,AVAudioRecorderDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (weak, nonatomic) IBOutlet UILabel *status;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *toggleRecording;
 
 @end
